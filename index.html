@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071426">
+<meta name="description" content="Ahmed Khaled Hassan — Network Administration Specialist">
+<title>Ahmed Khaled Hassan | Digital Profile</title>
+<style>
+:root{color-scheme:dark;--bg:#071426;--panel:#10243d;--line:#244361;--blue:#39a8ff;--text:#edf6ff;--muted:#a9bfd5}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -10%,#17446b 0,transparent 48%),var(--bg);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text);display:grid;place-items:center;padding:28px 16px}
+.card{width:min(100%,480px);border:1px solid var(--line);border-radius:28px;padding:34px 26px;background:linear-gradient(160deg,rgba(20,48,77,.96),rgba(8,24,43,.98));box-shadow:0 24px 80px #0008;text-align:center}
+.avatar{width:112px;height:112px;border-radius:50%;border:3px solid var(--blue);padding:4px;object-fit:cover;background:#183957}
+.eyebrow{margin:22px 0 8px;color:var(--blue);font-size:11px;font-weight:800;letter-spacing:2.6px;text-transform:uppercase}
+h1{font-size:clamp(24px,6vw,31px);line-height:1.15;margin:0 0 10px;letter-spacing:.2px}
+.role{font-size:15px;color:var(--muted);line-height:1.6;margin:0}
+.tags{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:20px 0 25px}
+.tag{font-size:11px;border:1px solid #315678;border-radius:99px;padding:7px 11px;color:#cce7ff;background:#102d49}
+.links{display:grid;gap:11px}
+.link{display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;color:var(--text);background:#142f4b;border:1px solid #294b6b;border-radius:14px;padding:14px 16px;font-weight:650;transition:.2s}
+.link:hover{transform:translateY(-2px);border-color:var(--blue);background:#193c5e}
+.primary{background:linear-gradient(100deg,#087bc7,#2458a7);border:0}
+.section{margin-top:27px;padding-top:22px;border-top:1px solid var(--line);text-align:left}
+.section h2{font-size:12px;letter-spacing:1.8px;color:var(--blue);text-transform:uppercase;margin:0 0 12px}
+.section p{font-size:13px;color:var(--muted);line-height:1.7;margin:0}
+footer{margin-top:24px;color:#718da8;font-size:11px;letter-spacing:1.4px}
+</style></head>
+<body><main class="card">
+<img class="avatar" src="https://avatars.githubusercontent.com/u/318426980?v=4" alt="Ahmed Khaled Hassan">
+<div class="eyebrow">Digital Professional Card</div>
+<h1>Ahmed Khaled Hassan</h1>
+<p class="role">Network Administration Specialist</p>
+<div class="tags"><span class="tag">Infrastructure &amp; Cyber Security</span><span class="tag">Nano Degree</span><span class="tag">CCNA</span></div>
+<nav class="links" aria-label="Contact links">
+<a class="link primary" href="mailto:ahmedkhaledd232@gmail.com">✉️ &nbsp; Email Me</a>
+<a class="link" href="https://github.com/ahmedkhaledd232-spec" target="_blank" rel="noopener">⌘ &nbsp; GitHub Profile</a>
+<button class="link" id="save" type="button">＋ &nbsp; Save Contact</button>
+</nav>
+<section class="section"><h2>Professional Focus</h2><p>Network administration, IT infrastructure, switching, network documentation, and wireless security.</p></section>
+<section class="section"><h2>Education &amp; Training</h2><p>Nano Degree · Infrastructure &amp; Cyber Security</p></section>
+<footer>AHMED KHALED HASSAN · DIGITAL IDENTITY</footer>
+</main>
+<script>
+document.getElementById('save').addEventListener('click',()=>{
+ const vcf=['BEGIN:VCARD','VERSION:3.0','FN:Ahmed Khaled Hassan','TITLE:Network Administration Specialist','EMAIL:ahmedkhaledd232@gmail.com','URL:https://github.com/ahmedkhaledd232-spec','NOTE:Infrastructure & Cyber Security','END:VCARD'].join('\\r\\n');
+ const blob=new Blob([vcf],{type:'text/vcard;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='Ahmed-Khaled-Hassan.vcf';a.click();URL.revokeObjectURL(url);
+});
+</script></body></html>
