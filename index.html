@@ -34,6 +34,7 @@ footer{margin-top:24px;color:#718da8;font-size:11px;letter-spacing:1.4px}
 <a class="link primary" href="mailto:ahmedkhaledd232@gmail.com">✉️ &nbsp; Email Me</a>
 <a class="link" href="https://www.linkedin.com/in/ahmed-khaled-hassann/" target="_blank" rel="noopener noreferrer">💼 &nbsp; LinkedIn Profile</a>
 <a class="link" href="https://wa.me/201017895348" target="_blank" rel="noopener noreferrer">💬 &nbsp; WhatsApp</a>
+<a class="link" href="https://www.facebook.com/ahmedkhaledd232/" target="_blank" rel="noopener noreferrer">📘 &nbsp; Facebook Profile</a>
 <a class="link" href="https://github.com/ahmedkhaledd232-spec" target="_blank" rel="noopener noreferrer">⌘ &nbsp; GitHub Profile</a>
 <button class="link" id="save" type="button">＋ &nbsp; Save Contact</button>
 </nav>
@@ -43,7 +44,7 @@ footer{margin-top:24px;color:#718da8;font-size:11px;letter-spacing:1.4px}
 </main>
 <script>
 document.getElementById('save').addEventListener('click',()=>{
- const vcf=['BEGIN:VCARD','VERSION:3.0','FN:Ahmed Khaled Hassan','TITLE:Network Administration Specialist','EMAIL:ahmedkhaledd232@gmail.com','URL:https://wa.me/201017895348','NOTE:Infrastructure & Cyber Security','END:VCARD'].join('\r\n');
+ const vcf=['BEGIN:VCARD','VERSION:3.0','FN:Ahmed Khaled Hassan','TITLE:Network Administration Specialist','EMAIL:ahmedkhaledd232@gmail.com','TEL;TYPE=CELL:+201017895348','URL:https://ahmedkhaledd232-spec.github.io/','NOTE:Infrastructure & Cyber Security','END:VCARD'].join('\r\n');
  const blob=new Blob([vcf],{type:'text/vcard;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
  a.href=url;a.download='Ahmed-Khaled-Hassan.vcf';a.click();URL.revokeObjectURL(url);
 });
